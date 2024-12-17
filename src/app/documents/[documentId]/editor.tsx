@@ -5,6 +5,12 @@ import StarterKit from "@tiptap/starter-kit";
 
 export const Editor = () => {
     const editor = useEditor({
+        editorProps: {
+            attributes: {
+                class: "focus:outline-none print:border-0 bg-white border border-[#C7C7C7] flex flex-col min-h-[1054px] min-w-[816px] pt-10 pr-14 pb-10 cursor-text",
+                style: "padding-left: 56px; padding-right: 56px;",
+            },
+        },
         extensions: [StarterKit],
         content: "<p>Hello World! 🌎️</p>",
         // used to remove warning about potential hydration errors
